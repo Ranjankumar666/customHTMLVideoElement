@@ -1,3 +1,9 @@
+# Note
+Use your own video and poster
+no videos are attached with repo.
+
+## Thanks to freshman.tech for the tutorial
+
 # Custom HTML5 Video Starter files
 
 Starter files for the custom HTML5 video player built with JavaScript. Features:
