@@ -69,6 +69,11 @@ video {
   margin-bottom: 10px;
 }
 
+.playback-speed {
+  display: flex;
+  align-items: center;
+}
+
 progress {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -127,11 +132,13 @@ progress::-moz-progress-bar {
   align-items: center;
 }
 
-.left-controls {
+.left-controls,
+.right-controls {
   display: flex;
   align-items: center;
   color: #fff;
 }
+
 
 .volume-controls {
   display: flex;
@@ -244,7 +251,8 @@ input[type=range]:focus::-webkit-slider-runnable-track {
   background: transparent;
 }
 
-input[type=range].volume {
+input[type=range].volume,
+input[type=range].playback-input {
   height: 5px;
   background-color: #fff;
 }
@@ -253,7 +261,8 @@ input[type=range].volume::-webkit-slider-runnable-track {
   background-color: transparent;
 }
 
-input[type=range].volume::-webkit-slider-thumb {
+input[type=range].volume::-webkit-slider-thumb,
+input[type=range]::-webkit-slider-thumb {
   margin-left: 0;
   height: 14px;
   width: 14px;
@@ -283,7 +292,8 @@ input[type=range]:focus::-moz-range-track {
   outline: none;
 }
 
-input[type=range].volume::-moz-range-thumb {
+input[type=range].volume::-moz-range-thumb,
+input[type=range]::-moz-slider-thumb {
   border: 1px solid #fff;
   background: #fff;
 }

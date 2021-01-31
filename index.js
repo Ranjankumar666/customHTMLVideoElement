@@ -18,6 +18,8 @@ const fullscreenButton = $('#fullscreen-button');
 const videoContainer = $('#video-container');
 const fullscreenIcons = fullscreenButton.querySelectorAll('use');
 const pipButton = $('#pip-button');
+const playbackInput = $('#playback-input');
+const playbackSpeedButton = $('#speed-button')
 
 // **** CHeck whether browser supports video tag
 
@@ -55,6 +57,8 @@ video.addEventListener('mouseleave', hideControls);
 videoControls.addEventListener('mouseenter', showControls);
 videoControls.addEventListener('mouseleave', hideControls);
 document.addEventListener('keypress', keyboardShortcuts);
+playbackInput.addEventListener('input', updatePlaybackSpeed);
+
 
 // document.addEventListener('fullscreenchange', updateFullscreenButton);
 
@@ -268,4 +272,10 @@ function keyboardShortcuts (event) {
             toggleFullscreen();
             break;
     }
+}
+
+function updatePlaybackSpeed() {
+    video.playbackRate = playbackInput.value;
+    playbackSpeedButton.setAttribute('data-title', `Speed ${playbackInput.value}x`)
+
 }

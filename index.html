@@ -63,6 +63,19 @@
           </div>
 
           <div class="right-controls">
+            <!-- <button data-title="Speed 1x"class="speed-button" id="speed-button">
+              <svg>
+                <use href="#video-speed"></use>
+              </svg>
+            </button> -->
+            <div class="playback-speed">
+              <button data-title="Speed 1x" class="speed-button" id="speed-button">
+                <svg>
+                  <use href="#video-speed"></use>
+                </svg>
+              </button>
+              <input type="range" class="playback-input" id="playback-input" min="0" max="2" step="0.25" value="1">
+            </div>
             <button data-title="PIP (p)" class="pip-button" id="pip-button">
               <svg>
                 <use href="#pip"></use>
@@ -96,6 +109,10 @@
 
       <symbol id="volume-low" viewBox="0 0 24 24">
       <path d="M5.016 9h3.984l5.016-5.016v16.031l-5.016-5.016h-3.984v-6zM18.516 12q0 2.766-2.531 4.031v-8.063q1.031 0.516 1.781 1.711t0.75 2.32z"></path>
+      </symbol>
+
+      <symbol id="video-speed" viewBox="0 0 24 24">
+        <path d="M20.38 8.57l-1.23 1.85a8 8 0 0 1-.22 7.58H5.07A8 8 0 0 1 15.58 6.85l1.85-1.23A10 10 0 0 0 3.35 19a2 2 0 0 0 1.72 1h13.85a2 2 0 0 0 1.74-1 10 10 0 0 0-.27-10.44zm-9.79 6.84a2 2 0 0 0 2.83 0l5.66-8.49-8.49 5.66a2 2 0 0 0 0 2.83z"/>
       </symbol>
 
       <symbol id="volume-mute" viewBox="0 0 24 24">
